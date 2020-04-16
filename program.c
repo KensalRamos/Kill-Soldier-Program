@@ -59,49 +59,6 @@ int main(void) {
 }
 
 /*
- *
- * Parameters: int pos - the desired position of soldier node
- * Description: This function will insert a node to the beginning of linked list.
- * Keep in mind that this is a circular list.
- * Head->prev = last_element
- * 
- *
-void insertFirst(int info) {
-
-    soldier *temp;
-    soldier *roam; // Only used for "roaming"/traversing the array
-    temp = (soldier *) malloc(sizeof(soldier));
-    temp->info = info;
-    temp->next = NULL;
-    temp->prev = NULL;
-
-    if (head == NULL) {
-        head = temp;
-
-        // We need to get the last element in order to set the head->prev
-        head->prev = temp;
-        head->next = temp;
-    }
-    else {
-        
-        temp->next = head;
-        head->prev = temp;
-        // Get the last element so we can get the prev node. Last nodes' next has to be temp.
-        // temp->prev = last_node
-        // last_node->next = temp
-        roam = head;
-        while(roam->next != head)
-            roam = roam->next;
-        
-        temp->prev = roam;
-        roam->next = temp;
-        head = temp;
-
-    }
-    
-}*/
-
-/*
  * Parameters: int sequence - position of the soldier node being created
  * Description: Simple function that creates a soldier node and returns it.
  * 
